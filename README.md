@@ -1,4 +1,9 @@
-sys-prog-a2
-===========
+Systems Programming Assignment 2
+James Dahms
+s2760619
+========
 
-Systems Programming Assignment2
+Milestone 1:
+  
+  Creating sync app
+
