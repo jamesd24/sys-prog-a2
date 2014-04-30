@@ -4,5 +4,13 @@ s2760619
 
 Milestone 1:
   
-  Creating sync app
+  When you do not wait for the child thread to finish reading stdin
+  the buffer printed by the parent thread could contain incorent information.
+  
+  You cannot recursevly lock and unlock a mutex in child threads. A new mutex
+  will need to be used to wait for the enter key input from the child thread.
+  
+  I did not need to use a third mutex for the final exit of the process. 
+  A simple approach involving a boolean to indicate if the single child 
+  thread had finished and exited.
 
