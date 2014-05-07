@@ -11,5 +11,7 @@ sema:	sema.c sema.h sematest.c
 event:	event_counter.c event_counter.h event_test.c
 		$(CC) -std=gnu99 -Wall event_test.c -g -o event_test -lpthread
 
+seq:	seq.c seq.h seq_test.c
+		$(CC) -std=gnu99 -Wall seq_test.c -g -o seq_test -lpthread
 clean:
-		rm -rf *o *gch sync sematest event_test
+		rm -rf *o *gch sync sematest event_test seq_test
