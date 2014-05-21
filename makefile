@@ -1,6 +1,6 @@
 CC = clang
 
-all:	sync
+all:	sync sema event seq queue network
 
 sync:	sync.c
 		$(CC) -std=gnu99 -Wall -o sync sync.c -lpthread
@@ -17,5 +17,8 @@ seq:	seq.c seq.h seq_test.c
 queue: 	queue.c queue.h queue_test.c queue_test.h
 		$(CC) -std=gnu99 -Wall queue_test.c -g -o queue_test -lpthread
 
+network:	network_test.c network_test.h netstat.h sema.h
+		$(CC) -std=gnu99 -Wall network_test.c -g -o network_test -lpthread	
+
 clean:
-		rm -rf *o *gch sync sematest event_test seq_test queue_test
+		rm -rf *o *gch sync sematest event_test seq_test queue_test network_test
