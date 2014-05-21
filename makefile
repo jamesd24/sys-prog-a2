@@ -13,5 +13,9 @@ event:	event_counter.c event_counter.h event_test.c
 
 seq:	seq.c seq.h seq_test.c
 		$(CC) -std=gnu99 -Wall seq_test.c -g -o seq_test -lpthread
+
+queue: 	queue.c queue.h queue_test.c queue_test.h
+		$(CC) -std=gnu99 -Wall queue_test.c -g -o queue_test -lpthread
+
 clean:
-		rm -rf *o *gch sync sematest event_test seq_test
+		rm -rf *o *gch sync sematest event_test seq_test queue_test
